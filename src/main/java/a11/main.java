@@ -14,9 +14,15 @@ public class main {
         stockRepuestos.put("FIL-102", 30);
         stockRepuestos.put("BAT-005", 10);
 
-        for (Map.Entry<String, Integer> producto : stockRepuestos.entrySet()) {
-            System.out.println("Producto: " + producto.getKey() +
-                    " | Unidades: " + producto.getValue());
+        // RECORRIDO INICIAL CON keySet()
+        Set<String> claves = stockRepuestos.keySet();
+
+        for (String codigo : claves) {
+
+            Integer unidades = stockRepuestos.get(codigo);
+
+            System.out.println("Código: " + codigo +
+                    " | Unidades: " + unidades);
         }
 
         boolean salir = false;
@@ -80,11 +86,18 @@ public class main {
                 }
 
                 case 4 -> {
+
                     System.out.println("Listado de existencias:");
 
-                    for (Map.Entry<String, Integer> producto : stockRepuestos.entrySet()) {
-                        System.out.println("Código: " + producto.getKey() +
-                                " | Unidades: " + producto.getValue());
+                    // RECORRIDO CON keySet()
+                    Set<String> clavesListado = stockRepuestos.keySet();
+
+                    for (String codigo : clavesListado) {
+
+                        Integer unidades = stockRepuestos.get(codigo);
+
+                        System.out.println("Código: " + codigo +
+                                " | Unidades: " + unidades);
                     }
                 }
 
