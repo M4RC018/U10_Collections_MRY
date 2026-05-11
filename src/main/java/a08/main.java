@@ -20,9 +20,8 @@ public class main {
       System.out.println("¿Son iguales?: " + listaA.equals(listaB));
       
       //Imprime el ultimo elemento de la lista
-      int ultimoElemento = listaA.size() -1;
-      System.out.println("Ultimo elemento de la lista: " + listaA.get(ultimoElemento));
-      System.out.println("Primer elemento de la lista: " + listaA.get(0));
+      System.out.println("Ultimo elemento de la lista: " + listaA.lastIndexOf("Luis"));
+      System.out.println("Primer elemento de la lista: " + listaA.indexOf("Luis"));
       
       //Ordenar la lista
       listaA.sort(null);
